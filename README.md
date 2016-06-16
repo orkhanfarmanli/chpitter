@@ -2,7 +2,7 @@
 
 ###instructions for students:
 
-*Create vendors folder
-*add Bootstrap (Sass) to vendors folder
-*add jQuery to vendors folder
-*associated sass partials are in assets/sass/partials directory
+1. Create vendors folder
+2. Add Bootstrap (Sass) to vendors folder
+3. Add jQuery to vendors folder
+4. Associated sass partials are in assets/sass/partials directory
