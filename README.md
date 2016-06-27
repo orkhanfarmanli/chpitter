@@ -6,3 +6,7 @@
 2. Add Bootstrap (Sass) to vendors folder
 3. Add jQuery to vendors folder
 4. Associated sass partials are in assets/sass/partials directory
+
+
+##Deadline 1:
+27/06/2016
