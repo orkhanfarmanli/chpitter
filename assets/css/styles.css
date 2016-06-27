@@ -1,0 +1,265 @@
+body {
+	background-repeat: no-repeat;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+	font-size: 14px;
+}
+
+@font-face {
+	font-family: 'rosettaIconFont';
+	src: url(../fonts/rosetta-icons-Regular.woff);
+	src: url(../fonts/rosetta-icons-Regular.ttf);
+}
+
+.Icon {
+	font-family: 'rosettaIconFont';
+	font-size: 25px;
+	display: block;
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.Icon--home:before { content: "\f053"; }
+.Icon--connect:before { content: "\f050"; }
+.Icon--discover:before { content: "\f052"; }
+.Icon--me:before { content: "\f056"; }
+.Icon--message:before { content: "\f054"; }
+.Icon--setting:before { content: "\f059"; }
+.Icon--tweet:before { content: "\f029"; background: rgba(0,132,180,.8); padding: 3px 9px; border-radius: 5px;color: white;}
+.Icon--bird:before { content: "\f179"; color: #0084b4; padding: 0 5em;}
+
+
+
+header {
+	background-color: #fff;
+	padding: 10px 0 0;
+	border-bottom: 1px solid #999;
+	font-weight: 500;
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	width: 100%;
+	height: 40px;
+}
+
+header a {
+	padding: 15px;
+	text-decoration: none;
+	color: #666;
+	font-size: 13px;
+}
+
+
+header input.search {
+	width: 200px;
+	height: 10px;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #333;
+	border: 1px solid #333;
+	color: #fff;
+	font-size: 12px;
+	opacity: 0.3;
+}
+
+header input.search:focus {
+	opacity: 1;
+	background-color: #666;
+	border: 1px solid #666;
+}
+
+::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+header input.search::-webkit-input-placeholder,
+input:focus {
+	outline: none;
+}
+
+.topbar-container {
+
+}
+
+.topbarleft {
+	padding-top: 3px;
+}
+
+.topbarleft a:hover{
+	color: #0084b4;
+	border-bottom: 5px solid #0084b4;
+}
+
+.topbarright {
+	position: absolute;
+	right: 25px;
+}
+
+.topbarright a:hover{
+	color: #0084B4;
+}
+
+.container {
+	width: 900px;
+	display: -webkit-flex;
+	display: flex;
+	position: relative;
+	margin: auto;
+}
+
+aside section {
+	width: 270px;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 4px;
+	margin: 0 0.8em;
+}
+
+.profile {
+	margin-top: 5em;
+	margin-bottom: 0.5em;
+}
+
+.tweet-feed {
+	margin-top: 5em;
+	width: 600px;
+	background-color: #fff;
+	border-radius: 4px;
+	position: absolute;
+}
+
+.profile-image {
+	background-image: url(../images/grey_header_web.jpg);
+	height: 150px;
+	margin: -10px -10px 0;
+	border: 1px solid #333;
+	border-radius: 4px 4px 0 0;
+}
+
+.follow-stats {
+	margin: 10px;
+}
+
+.follow-stats a{
+	font-size: 10px;
+	color: #aaa;
+	padding-right: 15px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.follow-stats a:hover{
+	color: #0084B4;
+}
+
+span.stats {
+	font-size: 18px;
+	color: #0084B4;
+	line-height: 30px;
+}
+
+.compose-tweet {
+	margin: -10px;
+	background-color: #E5F2F7;
+	text-align: center;
+	padding: 8px;
+	max-height: 100px;
+}
+
+.compose-tweet-field {
+	width: 250px;
+	height: 15px;
+	padding: 8px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,132,180,0.25);
+	font-size: 13px;
+	font-weight: 100;
+	resize: none;
+}
+
+.compose-tweet-field:focus {
+	height: 80px;
+	outline: none;
+}
+
+.tweet-feed-header {
+	font-size: 21px;
+	padding: 15px;
+	color: #777;
+	font-weight: 200;
+}
+
+.tweet-feed-hiddenpost,
+.spinner-feed-post,
+.tweet-feed-post {
+	border-top: 1px solid #ddd;
+	padding: 15px;
+	display: flex;
+	cursor: pointer;
+}
+
+.tweet-feed-hiddenpost {
+	visibility: hidden;
+}
+
+.tweet-feed-hiddenpost aside,
+.tweet-feed-post aside {
+	margin-right: 10px;
+}
+
+.tweet-feed-hiddenpost section,
+.tweet-feed-post section{
+	flex: 1;
+}
+
+.tweeter-pro-img {
+	width: 48px;
+	border-radius: 5px;
+}
+
+
+.tweeter-name a{
+	font-weight: bold;
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.tweeter-tweet a:hover,
+.tweeter-name a:hover {
+	text-decoration: underline;
+	color: #0084B4;
+}
+
+.tweeter-name p{
+	color: #999;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.tweeter-tweet p{
+	margin-top: 5px;
+}
+
+.tweeter-tweet img{
+	padding: 15px 0;
+	width: 400px;
+}
+
+.tweeter-tweet a{
+	text-decoration: none;
+	color: #0084B4;
+}
+
+/*.hiddenpost{
+	display: flex;
+	visibility: hidden;
+}*/
+
+#spinner-container {
+	margin: 20px auto 20px auto;
+	visibility: hidden;
+};

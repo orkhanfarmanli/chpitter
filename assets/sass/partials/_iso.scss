@@ -1,7 +1,21 @@
-.i_main{
-  width: 100%;
-  border-radius: 5px;
+.main_page{
+  margin: auto;
+  width: 1125px;
+  margin-top: 58px;
 }
+.main_page_top{
+  margin: auto;
+  width: 1125px;
+}
+body{
+  background-color: #f5f8fa;
+}
+.i_main{
+  margin-top: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
 
 .i_twitWrite{
   ul{
@@ -16,10 +30,10 @@
   padding: 10px;
   i{
     color:#339cc3;
-    position: absolute;
-    right: 45px;
-    top: 20px;
     font-size: 18px;
+    position: absolute;
+    top: -31px;
+    right: 23px;
   }
 
 form{
@@ -27,10 +41,10 @@ form{
   padding: 0px;
   margin: 0px;
   textarea{
-    position: absolute;
-    top: 10px;
-    right: 27px;
-    width: 450px;
+    position: relative;
+    top: 1px;
+    left:7px;
+    width: 100%;
     height: 36px;
     border: 1px solid #339cc3;
     border-radius: 5px;
@@ -40,7 +54,8 @@ form{
     overflow: hidden;
   }
   img{
-    margin:0 2px 2px 10px ;
+    margin-top: 2px;
+    margin-left: 20px;
     border-radius: 4px;
   }
 }
@@ -54,26 +69,30 @@ form{
 form{
   padding: 0px;
   margin: 0px;
-    height: 100px;
+  height: 100px;
 
   textarea{
-    position: absolute;
-    top: 10px;
-    right: 27px;
-    width: 450px;
+    position: relative;
+    top: 1px;
+    left:7px;
+    width: 100%;
     height: 100px;
     border: 1px solid #339cc3;
     border-radius: 5px;
     color: #339cc3;
     padding: 10px;
-     resize: none;
+    resize: none;
 
   }
 
   img{
-    margin:0 2px 2px 10px ;
+    margin-top: 2px;
+    margin-left: 20px;
     border-radius: 4px;
   }
+}
+i[name="kamera"]{
+  display: none;
 }
 ul li{
   margin-top: 5px;
@@ -87,12 +106,18 @@ ul li:first-child{
   margin-left: 0px;
 }
 ul{
-  margin:5px 0 0 10px;
+  width: 100%;
+  position: absolute;
+  left:8%;
+}
+input[type="file"]{
+  display: none;
 }
 input{
   width: 80px;
   height: 30px;
-  margin-left:44%;
+  position: absolute;
+  right: 0px;
   margin-top: 4px;
   border: none;
   background-color: #2f99c2;
@@ -106,13 +131,18 @@ input{
   margin-left: 10px;
 
 }
+.i_content:hover{
+  background-color: #f5f8fa;
+}
 .i_content{
+  background-color: white;
   border: 1px solid lightgray;
   border-top: none;
   position: relative;
   margin: 0;
   padding-top: 15px;
   width: 100%;
+  height: 420px;
   border-bottom: 1px solid lightgray;
 
   .top_content_left{
@@ -128,18 +158,36 @@ input{
   font-size: 13px;
   .text{
     height:33px;
+    width: 100%;
     overflow: hidden;
   }
-  img{
+  .img{
+    overflow: hidden;
+    img{
+    margin-top: 8px;
+    width:100%;
+    height:304px;
+  }
+  video{
     margin-top: 8px;
     width:404px;
     height:304px;
   }
+  }
   .i_content_title{
-  p{
+    a{
+      color:black;
+    }
+    a:hover{
+      color: #2f99c2;
+    }
+  h4{
+    font-size: 15px;
+    font-weight:600;
     display: inline;
   }
-  span{
+
+  span,span a{
     color:gray;
     margin-left: 5px;
   }
@@ -156,11 +204,23 @@ input{
   margin-top: 3px;
   svg{
   width: 20px;
+  fill:gray;
+}
+ svg:hover[name="1"]{
+  fill:#2f99c2;
+}
+svg:hover[name="2"]{
+ fill:lightgreen;
+}
+svg:hover[name="3"]{
+ fill:red;
 }
 i{
-  color:black ;
+  color:gray ;
   margin-top: 8px;
-
+}
+div[name="i"]:hover i{
+  color:#2f99c2;
 }
 
 }
