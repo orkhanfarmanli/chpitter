@@ -1,103 +1,161 @@
-.e-header-wrap{
-	height:50px;
+.container-fluid{
+  padding: 0px;
+}.e-header-wrap{
+	background-color: white;
+	height:48px;
+	border-bottom: 0.5px solid lightgrey;
 
-	ul li{
+	.first{
+		font-size: 25px;
+	}
+
+	.Icon:hover{
+		color: #0084b4;
+	}
+	.second{
+
+		font-size: 23px;
+	}
+  .header_icons ul{
+    margin: 0px;
+    padding: 0;
+  }
+.header_icons	ul li{
+  a{
+    color:#66757f;
+    text-decoration: none;
+  }
 		display: inline-block;
 		color:#66757f;
-		font-size: 16px;
-		padding: 10px;
+		padding: 5px;
 		transition: .3s;
-		img {
-			-webkit-filter: grayscale(100%);
-			filter: grayscale(100%);
-			width:30px;
-			height: 26px;
 		}
-		}
-		ul li:hover {
-			border-bottom:4px solid #0084b4;
-		}
+	.header_icons	ul li:hover {
+		border-bottom:4px solid #0084b4;
+					}
 }
+
 
 .e-bird,.e-egg {
 	width:50px;
 	height: 50px;
 	padding: 10px;
-}
+				}
 .e-search{
 	border-radius:21px;
-	padding:5px;
+	padding:3px;
 	margin-top:8px;
 	border:1px solid #e1e8ed;
 	background:#f5f8fa;
-}
+	width: 100%;
+		}
 .e-egg{
-	border-radius:15px;
+  position: relative;
+  #header_droptown{
+    z-index:2;
+    display: none;
+    position: absolute;
+    left: -91px;
 }
-.e-button-tweet {
-	display:inline-block;
-	background-image:url("../../img/ear-e.png");
-	    background-size:cover;
-	img {
+.F_triangle{
+position: absolute;
+left:82px;
+width: 0px;
+height:0px;
+border-right:9px solid white;
+border-bottom:10px solid lightgray;
+border-left:9px solid white;
+}
+#F_drpdown{
+position: absolute;
+top: 10px;
+padding: 0;
+margin: 0;
+border: 1px solid lightgray;
+background: white;
+width: 100px;
+text-align: center;
+p{
+  font-size: 10px;
+  line-height: 7px;
+}
+}
+#F_drpdown  li{
+  width: 100%;
+color: gray;
+padding: 10px;
+border-bottom:1px solid lightgray;
+list-style: none;
+font-size: 12px;
+}
+#F_drpdown li:hover{
+background-color: #2b7bb9;
+color: white;
+a{
+  color:white;
+}
+a:hover{
+  text-decoration: none;
+}
+}
 
-		width: 90px;
-		height: 37px;
-	}
-}
-.e-button-tweet:hover {
+	border-radius:15px;
+  img{
+    width: 32px;
+    height: 32px;
+    margin-top: -2px;
+    margin-left: -25px;
+  }
+	  }
+.tweetbtn {
 	display:inline-block;
-	background-image:url("../../img/ear-hvr.png");
-	background-size:cover;
+	width: 100px  ;
+	height: 37px;
+	background-color: #0084B4;
+	border-radius: 5px;
+	border: 2px solid #0084B4;
+	box-shadow: none;
+	color: white;
+  margin-top: 5px;
+
+}
+.tweetbtn:hover
+{
+	color: white;
+	text-decoration: none;
+}
+
+.e-search{
+	background-color:#f5f8fa;
+}
+.e-search:hover{
+	background-color:white;
 }
 .home-e {
-	height:36px;
-	width:43px;
-	background-image:url("../../img/home-icon.png");
-	background-size:cover;
 	float:left;
-	p {
-		margin-left:40px;
-		margin-top: 10px;
-	}
 }
 .home-e:hover {
-	background-image:url("../../img/home-hvr.png");
-	background-size:cover;
 	color:#2c7bb8;
-
 }
 .ring-e {
-	height:36px;
-	width:43px;
-	background-image:url("../../img/ring-e.png");
-	background-size:cover;
 	float:left;
-	p {
-		margin-left:40px;
-		margin-top: 10px;
-	}
 }
 .ring-e:hover {
-	background-image:url("../../img/ring-hvr.png");
-	background-size:cover;
 	color:#2c7bb8;
 }
 .envelope-e {
-	height:36px;
-	width:43px;
-	background-image:url("../../img/envelope-e.png");
-	background-size:cover;
 	float:left;
-	p {
-		margin-left:40px;
-		margin-top: 10px;
-	}
 }
 .envelope-e:hover {
-	background-image:url("../../img/envelope-hvr.png");
-	background-size:cover;
 	color:#2c7bb8;
 }
-.img-e:hover {
-	border-bottom:4px solid #2c7bb8;
+.text-e {
+	font-size:16px;
+	padding:5px;
+}
+.e-text-right-email {
+	color:#8899a6;
+}
+.header_right_side{
+
 }
