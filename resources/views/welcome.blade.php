@@ -36,9 +36,13 @@
         </style>
     </head>
     <body>
-        <div class="container">
+        <div class="hedar">
+          <div>
             <div class="content">
                 <div class="title">Laravel 5</div>
+                @yield('middle')
+                  @yield('left')
+                    @yield('right')
             </div>
         </div>
     </body>

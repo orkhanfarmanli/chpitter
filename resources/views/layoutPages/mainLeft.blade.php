@@ -1,14 +1,14 @@
 @extends('layoutPages.layout')
-<section class="col-md-10 col-md-offset-1" id="body"> 
+<section class="col-md-10 col-md-offset-1" id="body">
 <div class="main_page">
 @section('left')
-<div id="profile-column" class="col-md-3 col-xs-3">
-                    <!-- Nurgul -->
+  <div id="profile-column" class="col-md-3 col-xs-3">
+                      <!-- Nurgul -->
 
-                    <div class="card">
+                      <div class="card">
                         <!--Cover Image -->
                         <div class="col-md-12 profileCover">
-                            <a href=""><img nrc="images/1058.jpg"></a>
+                            <a href=""><img src="images/1058.jpg"></a>
                         </div>
                         <!--Cover Image -->
                         <!--Profile info -->
@@ -106,9 +106,5 @@
                         </div>
                     </div>
                 </div>
-@yield('middle') 
+@yield('middle')
 @stop
-
-
-
-

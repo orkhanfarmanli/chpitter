@@ -1,3 +1,7 @@
+a,li,svg,img,i{
+  cursor: pointer;
+}
+
 .main_page{
   margin: auto;
   width: 1125px;
@@ -32,7 +36,7 @@ body{
     color:#339cc3;
     font-size: 18px;
     position: absolute;
-    top: -31px;
+    top: -25px;
     right: 23px;
   }
 
@@ -203,19 +207,24 @@ input{
   font-size: 5px;
   margin-top: 3px;
   svg{
+    cursor: pointer;
   width: 20px;
   fill:gray;
 }
  svg:hover[name="1"]{
+   cursor: pointer;
   fill:#2f99c2;
 }
 svg:hover[name="2"]{
+  cursor: pointer;
  fill:lightgreen;
 }
 svg:hover[name="3"]{
+  cursor: pointer;
  fill:red;
 }
 i{
+  cursor: pointer;
   color:gray ;
   margin-top: 8px;
 }
