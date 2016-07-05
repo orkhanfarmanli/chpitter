@@ -23,3 +23,4 @@ Route::get('notifications', function(){
 Route::get('settings', function(){
 	return view('settings');
 });
+Route::get('/index', 'allInOne@index');
