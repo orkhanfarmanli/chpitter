@@ -1,0 +1,1 @@
+@extends('profilePages.profileRight')
