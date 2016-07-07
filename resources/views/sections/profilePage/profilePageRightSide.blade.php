@@ -1,5 +1,3 @@
-@extends('profilePages.profileMiddle')
-@section('right')
 <div id="suggestion-column" class="col-md-3">
                   <div class="findFriends">
                       <div class="row">
@@ -125,7 +123,4 @@
                   </div>
 
               </div>
-
-
-@stop
 </div>

@@ -1,5 +1,3 @@
-@extends('settingsPages.settingsLeft')
-@section('middle')
 <div class="col-md-6">
                   <div class="changeacc">Account
                   <h6>Change your basic account and language settings.</h6></div>
@@ -82,5 +80,3 @@
                   </div>
               </div>
                   </div>
-        </section>
-@stop

@@ -1,6 +1,3 @@
-@extends('layoutPages.mainMiddle') 
-
-@section('right')
 <div id="suggestion-column" class="col-md-3 col-xs-1">
                     <div class="findFriends">
                         <div class="row">
@@ -132,7 +129,3 @@
 
                     </div>
                 </div>
-@stop
-</div>
-</section>
-

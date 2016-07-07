@@ -11,15 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
-Route::get('profile', function(){
-	return view('profile');
-});
-Route::get('notifications', function(){
-	return view('notifications');
-});
-Route::get('settings', function(){
-	return view('settings');
-});
+Route::get('/main', 'HomeController@showMain');
+Route::get('/profile', 'ProfileController@showProfile');
+Route::get('/notifications', 'NotificationController@showNotification');
+Route::get('/settings', 'SettingController@showSetting');

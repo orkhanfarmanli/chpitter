@@ -74,7 +74,7 @@
                                         <b>Settings</b>
                                     </li>
                                     </a>
-                                    <a href="/">
+                                      <a href="/">
                                     <li>
                                         <b>Log out</b>
                                     </li>
@@ -135,15 +135,11 @@
         </div>
         </div>
 
-        <section class="col-md-10 col-md-offset-1" id="body">
-        <div class="main_page">
+
+
             @yield('left')
             @yield('middle')
             @yield('right')
-
-            <div>
-            <section>
-            </div>
 
 
 

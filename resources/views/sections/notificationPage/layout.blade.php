@@ -12,7 +12,7 @@
 </head>
 
 <body>
-   
+
              <div class="container-fluid">
                 <div class="e-header-wrap ">
             <section class="col-md-10 col-md-offset-1 " id="header">
@@ -21,7 +21,7 @@
                   <div class="header_icons">
                         <ul>
                             <li>
-                            <a href="/">
+                            <a href="/main">
                                 <span class='first Icon Icon--home'>
                                     <span class="text-e">Home</span>
                                 </span>
@@ -33,7 +33,7 @@
                                     <span class="text-e">Notifications</span>
                                     </span>
                                     </a>
-                                
+
                             </li>
                             <li>
                                 <span class='second Icon Icon--message'>
@@ -75,7 +75,7 @@
                                         <b>Settings</b>
                                     </li>
                                     </a>
-                                    <a>
+                                        <a href="/">
                                     <li>
                                         <b>Log out</b>
                                     </li>
@@ -85,30 +85,69 @@
                         </div>
                     </div>
                     <div class="col-md-4 ">
-                       <a class="tweetbtn">
+                       <a id="pop_open" class="tweetbtn">
                             <span class='Icon Icon--tweet'></span>Tweet</a>
                     </div>
                 </div>
               </div>
-                <!-- Farid + Eldar -->
             </section>
+            <div class="pop_back">
+
+            </div>
+            <div class="pop">
+
+              <div class="i_main">
+                  <div class="row">
+
+                      <div id="" class="i_twitWrite_onfocus_pop">
+                          <form class="i_twit_form" action="" method="post">
+                              <div class="col-md-12" style="margin:0;padding:0;">
+
+                                  <div class="col-md-12">
+                                      <textarea id="twit_input" name="name" rows="4" cols="40"></textarea>
+                                  </div>
+                              </div>
+                              <input type="file" name="image_src" id="image_src" hidden='hidden'>
+                          </form>
+                          <div class="col-md-11 col-md-offset-1">
+                              <i name="kamera" class="fa fa-camera" aria-hidden="true"></i>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="col-md-6" style="margin:0;padding:0;">
+                                  <ul>
+                                      <li><i class="fa fa-camera" aria-hidden="true"></i></li>
+                                      <li><i class="fa fa-gift" aria-hidden="true"></i>
+                                      </li>
+                                      <li><i class="fa fa-align-left" aria-hidden="true"></i></li>
+                                      <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="col-md-6">
+                                  <input type="submit" name="name" value="Tweet">
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+              </div
+
+            </div>
+
+
         </div>
-        
-
-        <!-- body section  -->
-        
-            @yield('left')
-         
-       
-        <!-- body section  -->
+        </div>
+        </div>
+        <section class="col-md-10 col-md-offset-1" id="body">
+        @yield('left')
+        @yield('middle')
+       </section>
 
 
 
+      <script src="jQuery/jquery.js" charset="utf-8"></script>
+      <script src="scripts/app.js" charset="utf-8"></script>
 
 
-
-</div>
-<script src="jQuery/jquery.js" charset="utf-8"></script>
-<script src="scripts/app.js" charset="utf-8"></script>
 </body>
 </html>

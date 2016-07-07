@@ -1,5 +1,4 @@
-@extends('notificationsPages.notificationsLeft')
-@section('middle')
+
 <div class="col-md-6 F_notifivations">
                 <!-- Farid -->
                 <h3>Notifications</h3>
@@ -65,8 +64,3 @@
                     <div class="col-md-5"></div>
                 </div>
             </div>
-        
- </section>
-
-@stop
-

@@ -1,7 +1,3 @@
-@extends('layoutPages.layout')
-
-@section('left')
-
 <div class="coverImage"></div>
         <section class="stat">
             <ul class="col-md-12">
@@ -32,7 +28,7 @@
         </section>
 
 
-  
+
     <!-- body section } -->
 
    <!--Profile Page -->
@@ -48,6 +44,3 @@
                 </div>
               </div>
               </section>
-
-@yield('middle')
-@stop

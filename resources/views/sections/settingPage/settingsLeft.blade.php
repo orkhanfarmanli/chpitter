@@ -1,7 +1,3 @@
-@extends('notificationsPages.layout')
-@section('left')
-<section class="col-md-10 col-md-offset-1" id="body">
-
           <div class="main_page_top">
               <div class=" col-md-3" >
 
@@ -62,6 +58,3 @@
                       <div class="direcicon"><i class="fa fa-chevron-right" aria-hidden="true"></i></div></div>
                   </div>
               </div>
-
-@yield('middle')              
-@stop
