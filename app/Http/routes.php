@@ -11,7 +11,16 @@
 |
 */
 
-Route::get('/main', 'HomeController@showMain');
+// Route::get('/main', 'HomeController@showMain');
+Route::get('/main', 'HomeController@index');
 Route::get('/profile', 'ProfileController@showProfile');
 Route::get('/notifications', 'NotificationController@showNotification');
 Route::get('/settings', 'SettingController@showSetting');
+
+Route::get('/', function () {
+    return view('auth.login');
+});
+
+Route::auth();
+
+Route::post('/home', 'HomeController@index');

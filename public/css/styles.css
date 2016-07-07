@@ -29,7 +29,7 @@ body {
 .Icon--message:before { content: "\f054"; }
 .Icon--setting:before { content: "\f059"; }
 .Icon--tweet:before { content: "\f029"; background: rgba(0,132,180,.8); padding: 3px 9px; border-radius: 5px;color: white;}
-.Icon--bird:before { content: "\f179"; color: #0084b4; padding: 0 5em;}
+.Icon--bird:before { content: "\f179"; color: white; padding: 0 5em;}
 
 
 

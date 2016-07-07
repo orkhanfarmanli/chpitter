@@ -74,7 +74,7 @@
                                         <b>Settings</b>
                                     </li>
                                     </a>
-                                    <a href="/">
+                                    <a href="{{ url('/logout') }}">
                                     <li>
                                         <b>Log out</b>
                                     </li>
