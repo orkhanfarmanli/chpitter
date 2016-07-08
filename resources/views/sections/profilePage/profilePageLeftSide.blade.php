@@ -35,8 +35,8 @@
             <section class="col-md-12" id="body">
               <div id="profile-column" class="col-md-3 col-md-offset-1">
                 <div class="profileInfo">
-                    <h1><a href="">Ağ Qarğa</a></h1>
-                    <h2><a href="">@AgGarga</a></h2>
+                    <h1><a href="">{{ Auth::user()->username }}</a></h1>
+                    <h2><a href=""><span>@</span>{{ Auth::user()->username }}</a></h2>
                     <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Azerbaijan</div>
                     <div class="join"><i class="fa fa-calendar" aria-hidden="true"></i> Joined February 2012</div>
                     <div class="photos"><i class="fa fa-camera" aria-hidden="true"></i><a href=""> Photos and videos</a></div>

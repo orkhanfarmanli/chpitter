@@ -18,8 +18,8 @@
                           </ul>
                           <ul class="col-md-8 col-md-offset-1">
                               <li>
-                                  <a href="#" id="blackMamba">Ağ Qarğa</a>
-                                  <a href="">@AgGarga</a>
+                                  <a href="#" id="blackMamba">{{ Auth::user()->username }}</a>
+                                  <a href=""><span>@</span>{{ Auth::user()->username }}</a>
                               </li>
 
                           </ul>
