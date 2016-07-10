@@ -17,7 +17,7 @@
                   <input type="file" name="image_src" id="image_src" hidden='hidden'>
               </form>
               <div class="col-md-11 col-md-offset-1">
-                  <i name="kamera" class="fa fa-camera" aria-hidden="true"></i>
+                  <i id="kamera-main" class="fa fa-camera" aria-hidden="true"></i>
               </div>
               <div class="col-md-12">
                   <div class="col-md-6" style="margin:0;padding:0;">

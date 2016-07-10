@@ -2271,7 +2271,7 @@ input[type="checkbox"] {
   line-height: normal; }
 
 input[type="file"] {
-  display: block; }
+   }
 
 input[type="range"] {
   display: block;
@@ -6525,5 +6525,18 @@ li {
 .F_twittersvg {
   width: 24px;
   height: 21px; }
+
+  .cover-fa{
+    position: absolute;
+    right: 61px;
+    top: 263px;
+    color: white
+  }
+.profile-photo-fa{
+  position: absolute;
+  top: 390px;
+  left: 265px;
+  color: white;
+}
 
 /*# sourceMappingURL=app.css.map */

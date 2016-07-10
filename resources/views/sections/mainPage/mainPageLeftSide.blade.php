@@ -13,6 +13,7 @@
                               <li>
                                   <a href="">
                                       <img src="images/p.jpeg">
+                                      <i class="fa fa-camera" aria-hidden="true"></i>
                                   </a>
                               </li>
                           </ul>

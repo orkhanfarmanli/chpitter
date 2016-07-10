@@ -8,8 +8,14 @@ $(document).ready(function() {
       "i_twitWrite_onfocus")
   })
 
-  $(".fa-camera").click(function() {
+  $("#kamera-main").click(function() {    
     $("#image_src").click();
+  });
+  $("#kamra-cover-profile").click(function() {
+    $("#cover_photo").click();
+  });
+  $("#kamera-profile").click(function() {
+    $("#profile_photo").click();
   });
 
   $("#twit_input_one").focusout(function() {

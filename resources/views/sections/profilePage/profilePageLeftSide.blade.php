@@ -1,4 +1,6 @@
-<div class="coverImage"></div>
+<div class="coverImage">
+  <i id="kamra-cover-profile" class="fa fa-camera fa-3x cover-fa" aria-hidden="true"></i>
+  <input type="file" name="cover_photo" id="cover_photo" hidden="hidden"></div>
         <section class="stat">
             <ul class="col-md-12">
                     <li class="col-md-2 col-md-offset-1 img">
@@ -26,6 +28,13 @@
             </ul>
 
         </section>
+
+        <form class="" action="index.html" method="post">
+          <input style="opacity:0"type="file" name="profile_photo" id="profile_photo" >
+        </form>
+        <div id="kamera-profile">
+          <i  class="fa fa-camera fa-2x profile-photo-fa" aria-hidden="true"></i>
+        </div>
 
 
 
