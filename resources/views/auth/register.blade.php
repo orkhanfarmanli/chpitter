@@ -3,6 +3,31 @@
     <h2>Join Twitter tomorrow</h2>
     <form class="" role="form" method="POST" action="{{ url('/register') }}">
         {{ csrf_field() }}
+        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+            <label for="name" class="col-md-4 control-label">Name</label>
+
+
+            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
+             @if ($errors->has('name'))
+            <span class="help-block">
+                <strong>{{ $errors->first('name') }}</strong>
+            </span>
+            @endif
+
+        </div>
+
+        <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
+            <label for="surname" class="col-md-4 control-label">Surname</label>
+
+
+            <input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}">
+             @if ($errors->has('surname'))
+            <span class="help-block">
+                <strong>{{ $errors->first('surname') }}</strong>
+            </span>
+            @endif
+
+        </div>
 
         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
             <label for="username" class="col-md-4 control-label">UserName</label>

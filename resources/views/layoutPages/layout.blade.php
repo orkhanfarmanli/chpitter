@@ -64,7 +64,7 @@
                                 <ul id="F_drpdown">
                                   <a href="/profile">
                                     <li>
-                                        <b>Ismayil <p>
+                                        <b>{{ Auth::user()->username }} <p>
                                           view profile
                                         </p></b>
                                     </li>

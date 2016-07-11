@@ -16,6 +16,7 @@ Route::get('/main', 'HomeController@index');
 Route::get('/profile', 'ProfileController@showProfile');
 Route::get('/notifications', 'NotificationController@showNotification');
 Route::get('/settings', 'SettingController@showSetting');
+Route::get('/adminpage', 'AdminController@show');
 
 Route::get('/', function () {
     return view('auth.login');
