@@ -95,7 +95,7 @@ form{
     border-radius: 4px;
   }
 }
-i[name="kamera"]{
+#kameramain{
   display: none;
 }
 ul li{
@@ -232,4 +232,19 @@ div[name="i"]:hover i{
   color:#2f99c2;
 }
 
+}
+.cover-fa{
+  position: absolute;
+  right: 61px;
+  top: 263px;
+  color: white
+}
+.profile-photo-fa{
+position: absolute;
+top: 390px;
+left: 265px;
+color: white;
+}
+#profile_photo{
+  opacity: 0;
 }

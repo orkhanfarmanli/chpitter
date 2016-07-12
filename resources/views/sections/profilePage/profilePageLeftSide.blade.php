@@ -1,10 +1,11 @@
 <div class="coverImage">
+      <img src="{{ Auth::user()->coverphoto }}" alt="" />
   <i id="kamra-cover-profile" class="fa fa-camera fa-3x cover-fa" aria-hidden="true"></i>
-  <input type="file" name="cover_photo" id="cover_photo" hidden="hidden"></div>
+  </div>
         <section class="stat">
             <ul class="col-md-12">
                     <li class="col-md-2 col-md-offset-1 img">
-                    <a href=""><img src="images/p.jpeg"></a>
+                    <a href=""><img src="images/default_profile_photo.png"></a>
                     </li>
                     <li class="col-md-1 b">
                         <a class="statistics" href="#">Tweets</a>
@@ -23,15 +24,19 @@
                         <a href="">3,200</a>
                     </li>
                     <li class="col-md-offset-3">
-                         <button type="button" class="edit-button btn ">Edit profile</button>
+                      <form class="" action="/uploadfile/{{Auth::user()->id }}" method="post" enctype="multipart/form-data">
+                        {{csrf_field()}}
+                        <button type="submit" class="edit-button btn ">Edit profile</button>
+                        <input type="file" name="cover_photo" id="cover_photo" hidden="hidden">
+                        <input style="opacity:0"type="file" name="profile_photo" id="profile_photo" >
+                      </form>
+
                     </li>
             </ul>
 
         </section>
 
-        <form class="" action="index.html" method="post">
-          <input style="opacity:0"type="file" name="profile_photo" id="profile_photo" >
-        </form>
+
         <div id="kamera-profile">
           <i  class="fa fa-camera fa-2x profile-photo-fa" aria-hidden="true"></i>
         </div>
@@ -44,7 +49,7 @@
             <section class="col-md-12" id="body">
               <div id="profile-column" class="col-md-3 col-md-offset-1">
                 <div class="profileInfo">
-                    <h1><a href="">{{ Auth::user()->username }}</a></h1>
+                    <h1><a href="">{{ Auth::user()->name }} {{ Auth::user()->surname }}</a></h1>
                     <h2><a href=""><span>@</span>{{ Auth::user()->username }}</a></h2>
                     <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Azerbaijan</div>
                     <div class="join"><i class="fa fa-calendar" aria-hidden="true"></i> Joined February 2012</div>

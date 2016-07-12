@@ -4,7 +4,7 @@
                     <div class="card">
                       <!--Cover Image -->
                       <div class="col-md-12 profileCover">
-                          <a href=""><img src="images/1058.jpg"></a>
+                          <a href=""><img src="images/default_banner_photo.png"></a>
                       </div>
                       <!--Cover Image -->
                       <!--Profile info -->
@@ -12,7 +12,7 @@
                           <ul class="col-md-3">
                               <li>
                                   <a href="">
-                                      <img src="images/p.jpeg">
+                                      <img src="images/default_profile_photo.png">
                                       <i class="fa fa-camera" aria-hidden="true"></i>
                                   </a>
                               </li>
