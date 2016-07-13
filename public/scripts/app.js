@@ -8,7 +8,7 @@ $(document).ready(function() {
       "i_twitWrite_onfocus")
   });
 
-  
+
    $("#twit_input_one").focusout(function() {
     if ($("#twit_input_one").val() == "") {
       $("#twitwrite").addClass(
@@ -19,8 +19,12 @@ $(document).ready(function() {
 
   })
 
-//twitright area camera icon js for open input type file 
+//twitright area camera icon js for open input type file
   $("#kamera-main").click(function() {
+    $("#image_src").click();
+  });
+
+  $("#kamera_main_two").click(function() {
     $("#image_src").click();
   });
 //cover section open input file for cover image
@@ -33,7 +37,7 @@ $(document).ready(function() {
     $("#profile_photo").click();
   });
 
- 
+
   var a = true;
   $("#egg").click(function() {
     if (a) {

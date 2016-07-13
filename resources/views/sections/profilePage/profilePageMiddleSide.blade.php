@@ -3,26 +3,31 @@
   <div class="i_main">
       <div class="row">
           <div id="twitwrite" class="i_twitWrite">
-              <form class="i_twit_form" action="" method="post">
+              <form class="i_twit_form" action="/twitwrite/{{Auth::user()->id}}" method="post" enctype="multipart/form-data">
+                {{ csrf_field() }}
                   <div class="col-md-12" style="margin:0;padding:0;">
                       <div class="col-md-1" style="margin:0;padding:0;">
                           <div class="form_img">
-                              <img style="width:32px;height:32px" src="img\Lighthouse.jpg" alt="" />
+                              @if(empty(Auth::user()->profilephoto))
+                               <img style="width:32px;height:32px" src="images/default_profile_photo.png">
+                              @else
+                               <img style="width:32px;height:32px" src="{{ Auth::user()->profilephoto }}">
+                              @endif
                           </div>
                       </div>
                       <div class="col-md-11">
-                          <textarea id="twit_input_one" name="name" rows="4" cols="40"></textarea>
+                          <textarea id="twit_input_one" name="twit_text" rows="4" cols="40"></textarea>
                       </div>
                   </div>
-                  <input type="file" name="image_src" id="image_src" hidden='hidden'>
-              </form>
+                  <input type="file" name="twit_image" id="image_src" hidden='hidden'>
+
               <div class="col-md-11 col-md-offset-1">
                   <i id="kamera-main" class="fa fa-camera" aria-hidden="true"></i>
               </div>
               <div class="col-md-12">
                   <div class="col-md-6" style="margin:0;padding:0;">
                       <ul>
-                          <li><i class="fa fa-camera" aria-hidden="true"></i></li>
+                          <li><i id="kamera_main_two" class="fa fa-camera" aria-hidden="true"></i></li>
                           <li><i class="fa fa-gift" aria-hidden="true"></i>
                           </li>
                           <li><i class="fa fa-align-left" aria-hidden="true"></i></li>
@@ -34,7 +39,7 @@
                       <input type="submit" name="name" value="Tweet">
                   </div>
               </div>
-
+  </form>
           </div>
       </div>
   </div>

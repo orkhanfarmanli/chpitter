@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Twit;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Http\Requests;
@@ -46,6 +47,14 @@ class ProfileController extends Controller
     }
 
     return back();
+  }
+
+  public function addTwit(Request $req,User $user)
+  {
+      $newTwit=new Twit;
+      $newTwit->twit_text=$req->twit_text;
+      $user->twits()->save($newTwit);
+      return back();
   }
   //
 

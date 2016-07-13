@@ -26,3 +26,5 @@ Route::get('/', function () {
 Route::auth();
 
 Route::post('/home', 'HomeController@index');
+
+Route::post('/twitwrite/{user}', 'ProfileController@addTwit');
