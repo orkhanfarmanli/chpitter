@@ -7,7 +7,7 @@
                               <h5>Username</h5>
                           </div>
                       <div class="col-md-8">
-                          <input type="text" name="username" value="isco">
+                          <input type="text" name="username" value="{{ Auth::user()->username }}">
                           <h6><a href="#">https://twitter.com/isco</a></h6>
                       </div>
                       </div>
@@ -16,7 +16,7 @@
                               <h5>Email</h5>
                           </div>
                       <div class="col-md-8">
-                          <input type="text" name="username" value="isco">
+                          <input type="text" name="username" value="{{ Auth::user()->email }}">
                           <h6>Email will not be publicly displayed. <a href="#">Learn more</a></h6>
                           <h6>Check your email (isco@) to confirm. <br><a href="#">Resend information</a></h6>
 
