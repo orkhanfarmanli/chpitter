@@ -4,23 +4,33 @@
                     <div class="card">
                       <!--Cover Image -->
                       <div class="col-md-12 profileCover">
-                          <a href=""><img src="images/default_banner_photo.png"></a>
+                          <a href="">
+                      @if(empty(Auth::user()->coverphoto))
+                      <img src="images/default_banner_photo.png">
+                      @else
+                      <img src="{{ Auth::user()->coverphoto }}" alt="" />
+                      @endif
+                          </a>
                       </div>
                       <!--Cover Image -->
                       <!--Profile info -->
                       <div class="info">
                           <ul class="col-md-3">
                               <li>
-                                  <a href="">
-                                      <img src="images/default_profile_photo.png">
+                                  <a href="/profile">
+                                       @if(empty(Auth::user()->profilephoto))
+                                       <img src="images/default_profile_photo.png">
+                                      @else 
+                                       <img src="{{ Auth::user()->profilephoto }}">
+                                      @endif
                                       <i class="fa fa-camera" aria-hidden="true"></i>
                                   </a>
                               </li>
                           </ul>
                           <ul class="col-md-8 col-md-offset-1">
                               <li>
-                                  <a href="#" id="blackMamba">{{ Auth::user()->name }}</a>
-                                  <a href=""><span>@</span>{{ Auth::user()->username }}</a>
+                                  <a href="/profile" id="blackMamba">{{ Auth::user()->name }}</a>
+                                  <a href="/profile"><span>@</span>{{ Auth::user()->username }}</a>
                               </li>
 
                           </ul>

@@ -5810,7 +5810,7 @@ body {
       margin-top: 2px;
       margin-left: 20px;
       border-radius: 4px; }
-  .i_twitWrite_onfocus #kameramain {
+  .i_twitWrite_onfocus #kamera-main {
     display: none; }
   .i_twitWrite_onfocus ul li {
     margin-top: 5px;
@@ -5918,6 +5918,7 @@ body {
   color: white; }
 
 .profile-photo-fa {
+  z-index: 10;
   position: absolute;
   top: 390px;
   left: 265px;
@@ -5925,6 +5926,9 @@ body {
 
 #profile_photo {
   opacity: 0; }
+
+input[type="file"] {
+  display: none; }
 
 .card {
   background-color: white;

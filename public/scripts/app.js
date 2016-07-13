@@ -2,23 +2,14 @@ function openWindow() {
   document.getElementById("image_src").click
 }
 $(document).ready(function() {
-
+//twit middleside twitRight area js
   $("#twit_input_one").focus(function() {
     $("#twitwrite").removeClass("i_twitWrite").addClass(
       "i_twitWrite_onfocus")
-  })
-
-  $("#kamera-main").click(function() {    
-    $("#image_src").click();
-  });
-  $("#kamra-cover-profile").click(function() {
-    $("#cover_photo").click();
-  });
-  $("#kamera-profile").click(function() {
-    $("#profile_photo").click();
   });
 
-  $("#twit_input_one").focusout(function() {
+  
+   $("#twit_input_one").focusout(function() {
     if ($("#twit_input_one").val() == "") {
       $("#twitwrite").addClass(
         "i_twitWrite").removeClass(
@@ -28,6 +19,21 @@ $(document).ready(function() {
 
   })
 
+//twitright area camera icon js for open input type file 
+  $("#kamera-main").click(function() {
+    $("#image_src").click();
+  });
+//cover section open input file for cover image
+  $("#kamra-cover-profile").click(function() {
+    $("#cover_photo").click();
+  });
+//profile section open input file for profile image
+  $("#profile_kamera").click(function() {
+    console.log("nese");
+    $("#profile_photo").click();
+  });
+
+ 
   var a = true;
   $("#egg").click(function() {
     if (a) {

@@ -1,11 +1,25 @@
-<div class="coverImage">
-      <img src="{{ Auth::user()->coverphoto }}" alt="" />
+<div class="coverImage">  
+
+    @if(empty(Auth::user()->coverphoto))
+    <img src="images/default_banner_photo.png">
+    @else
+    <img src="{{ Auth::user()->coverphoto }}" alt="" />
+    @endif
+      
   <i id="kamra-cover-profile" class="fa fa-camera fa-3x cover-fa" aria-hidden="true"></i>
   </div>
         <section class="stat">
             <ul class="col-md-12">
                     <li class="col-md-2 col-md-offset-1 img">
-                    <a href=""><img src="images/default_profile_photo.png"></a>
+                    <a href="">
+                    @if(empty(Auth::user()->profilephoto))
+                     <img src="images/default_profile_photo.png">
+                    @else 
+                     <img src="{{ Auth::user()->profilephoto }}">
+                    @endif
+                    
+                   
+                    </a>
                     </li>
                     <li class="col-md-1 b">
                         <a class="statistics" href="#">Tweets</a>
@@ -28,18 +42,15 @@
                         {{csrf_field()}}
                         <button type="submit" class="edit-button btn ">Edit profile</button>
                         <input type="file" name="cover_photo" id="cover_photo" hidden="hidden">
-                        <input style="opacity:0"type="file" name="profile_photo" id="profile_photo" >
+                        <input type="file" name="profile_photo" id="profile_photo" >
                       </form>
 
                     </li>
             </ul>
 
         </section>
+          <i id="profile_kamera" class="fa fa-camera fa-2x profile-photo-fa" aria-hidden="true"></i>
 
-
-        <div id="kamera-profile">
-          <i  class="fa fa-camera fa-2x profile-photo-fa" aria-hidden="true"></i>
-        </div>
 
 
 

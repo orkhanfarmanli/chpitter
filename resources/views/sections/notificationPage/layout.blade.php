@@ -59,7 +59,12 @@
                     </div>
                     <div class="col-md-1">
                         <div class="e-egg">
-                            <img id="egg" src="img/egg.png">
+                         @if(empty(Auth::user()->profilephoto))
+                         <img id="egg" src="images/default_profile_photo.png">
+                        @else 
+                         <img id="egg" src="{{Auth::user()->profilephoto}}">
+                        @endif
+                            
                             <div id="header_droptown">
                                 <div class="F_triangle"></div>
                                 <ul id="F_drpdown">

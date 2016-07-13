@@ -21,16 +21,28 @@ class ProfileController extends Controller
   public function uploadFile(Request $request, User $userId)
   {
 
-    if ($request->hasFile('cover_photo'))
+    if ($request->hasFile('cover_photo') )
      {
-       $file = $request->file('cover_photo');
-       $ext=$file->getClientOriginalExtension();
-       $destinationPath=public_path().'/images';
-       //$fileName="coverImage".rand().".".$ext;
-       $fileName="$userId->id.coverPhoto";
-      $file->move($destinationPath, $fileName);
-      $userId->coverphoto='images'.'/'.$fileName;
-      $userId->save();
+        $file = $request->file('cover_photo');
+        $ext=$file->getClientOriginalExtension();
+        $destinationPath=public_path().'/images';
+
+        $fileName="$userId->id.coverPhoto.$ext";
+        $file->move($destinationPath, $fileName);
+        $userId->coverphoto='images'.'/'.$fileName;
+        $userId->save();
+    }
+
+    if($request->hasFile('profile_photo')){
+
+        $file = $request->file('profile_photo');
+        $ext=$file->getClientOriginalExtension();
+        $destinationPath=public_path().'/images';
+
+        $fileName="$userId->id.profilePhoto.$ext";
+        $file->move($destinationPath, $fileName);
+        $userId->profilephoto='images'.'/'.$fileName;
+        $userId->save();
     }
 
     return back();

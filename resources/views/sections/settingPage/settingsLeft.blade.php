@@ -4,7 +4,13 @@
                     <div class="card" style="height:180px">
                         <!--Cover Image -->
                         <div class="col-md-12 profileCover">
-                            <a href=""><img src="images/1058.jpg"></a>
+                            <a href="">
+                       @if(empty(Auth::user()->coverphoto))
+                      <img src="images/default_banner_photo.png">
+                      @else
+                      <img src="{{ Auth::user()->coverphoto }}" alt="" />
+                      @endif
+                      </a>
                         </div>
                         <!--Cover Image -->
                         <!--Profile info -->
@@ -12,7 +18,11 @@
                             <ul class="col-md-3">
                                 <li>
                                     <a href="">
-                                        <img src="images/p.jpeg">
+                                @if(empty(Auth::user()->profilephoto))
+                                 <img id="egg" src="images/default_profile_photo.png">
+                                @else 
+                                 <img id="egg" src="{{Auth::user()->profilephoto}}">
+                                @endif
                                     </a>
                                 </li>
                             </ul>

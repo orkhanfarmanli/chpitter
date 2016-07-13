@@ -95,7 +95,7 @@ form{
     border-radius: 4px;
   }
 }
-#kameramain{
+#kamera-main{
   display: none;
 }
 ul li{
@@ -225,7 +225,7 @@ svg:hover[name="3"]{
 }
 i{
   cursor: pointer;
-  color:gray ;
+  color: gray;
   margin-top: 8px;
 }
 div[name="i"]:hover i{
@@ -240,6 +240,7 @@ div[name="i"]:hover i{
   color: white
 }
 .profile-photo-fa{
+z-index:10;
 position: absolute;
 top: 390px;
 left: 265px;
@@ -247,4 +248,7 @@ color: white;
 }
 #profile_photo{
   opacity: 0;
+}
+input[type="file"]{
+  display:none;
 }
