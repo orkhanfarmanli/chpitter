@@ -63,7 +63,7 @@
                     <div class="i_content_title">
                         <b><h4><a>{{Auth::user()->name }} {{Auth::user()->surname }}</a></h4></b>
                         <span><span>@ </span>{{Auth::user()->username }}
-                            <a>{{$tweet->created_at}}</a>
+                            <a>{{$tweet->created_at->diffForHumans()}}</a>
                         </span>
                     </div>
                     

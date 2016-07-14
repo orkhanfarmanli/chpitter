@@ -17,10 +17,15 @@ class ProfileController extends Controller
 
   public function showProfile(Request $request)
   {
+
+    $follow = User::take(3)->get();
+
     $user_id=Auth::user()->id;
     $tweets = Twit::orderBy('created_at','desc')->where('user_id', $user_id)->get();
-    return view('profile',compact('tweets'));
+    return view('profile',compact('tweets','follow'));
     
+
+
   }
 
   public function uploadFile(Request $request, User $userId)
