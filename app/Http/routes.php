@@ -11,15 +11,20 @@
 |
 */
 
+// Route::get('/main', 'HomeController@showMain');
+Route::get('/main', 'HomeController@index');
+Route::get('/profile', 'ProfileController@showProfile');
+Route::post('/uploadfile/{userId}', 'ProfileController@uploadFile');
+Route::get('/notifications', 'NotificationController@showNotification');
+Route::get('/settings', 'SettingController@showSetting');
+Route::get('/adminpage', 'AdminController@show');
+
 Route::get('/', function () {
-    return view('main');
+   return redirect('/login');
 });
-Route::get('profile', function(){
-	return view('profile');
-});
-Route::get('notifications', function(){
-	return view('notifications');
-});
-Route::get('settings', function(){
-	return view('settings');
-});
+
+Route::auth();
+
+Route::post('/home', 'HomeController@index');
+
+Route::post('/twitwrite/{user}', 'ProfileController@addTwit');
