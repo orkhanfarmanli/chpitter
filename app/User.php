@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use App\Twit;
+
 class User extends Authenticatable
 {
     /**
@@ -11,8 +13,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public function twits()
+    {
+      return $this->hasMany(Twit::class);
+    }
+
     protected $fillable = [
-        'name', 'email', 'password',
+         'email', 'password','username','surname','profilephoto','coverphoto',
     ];
 
     /**
@@ -23,4 +30,5 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+  
 }

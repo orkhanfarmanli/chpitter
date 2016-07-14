@@ -21,7 +21,7 @@
                   <div class="header_icons">
                         <ul>
                             <li>
-                            <a href="/">
+                            <a href="/main">
                                 <span class='first Icon Icon--home'>
                                     <span class="text-e">Home</span>
                             </a>
@@ -58,13 +58,17 @@
                     </div>
                     <div class="col-md-1">
                         <div class="e-egg">
-                            <img id="egg" src="img/egg.png">
+                              @if(empty(Auth::user()->profilephoto))
+                             <img id="egg" src="images/default_profile_photo.png">
+                            @else 
+                             <img id="egg" src="{{Auth::user()->profilephoto}}">
+                            @endif
                             <div id="header_droptown">
                                 <div class="F_triangle"></div>
                                 <ul id="F_drpdown">
                                   <a href="/profile">
                                     <li>
-                                        <b>Ismayil <p>
+                                        <b>{{ Auth::user()->username }} <p>
                                           view profile
                                         </p></b>
                                     </li>
@@ -74,7 +78,7 @@
                                         <b>Settings</b>
                                     </li>
                                     </a>
-                                    <a>
+                                    <a href="{{ url('/logout') }}">
                                     <li>
                                         <b>Log out</b>
                                     </li>
@@ -99,7 +103,7 @@
               <div class="i_main">
                   <div class="row">
 
-                      <div id="twitwrite" class="i_twitWrite_onfocus_pop">
+                      <div id="" class="i_twitWrite_onfocus_pop">
                           <form class="i_twit_form" action="" method="post">
                               <div class="col-md-12" style="margin:0;padding:0;">
 
@@ -131,20 +135,20 @@
                       </div>
                   </div>
               </div
+            </div>
+        </div>
+        </div>
 
+        <section class="col-md-10 col-md-offset-1" id="body">
+        <div class="main_page">
+            @yield('left')
+            @yield('middle')
+            @yield('right')
+
+            <div>
+            <section>
             </div>
 
-
-        </div>
-
-        </div>
-
-        <!-- body section  -->
-
-            @yield('left')
-
-
-        <!-- body section  -->
 
 
 <script src="jQuery/jquery.js" charset="utf-8"></script>

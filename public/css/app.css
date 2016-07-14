@@ -5765,7 +5765,7 @@ body {
     color: #339cc3;
     font-size: 18px;
     position: absolute;
-    top: -25px;
+    top: -31px;
     right: 23px; }
   .i_twitWrite form {
     padding: 0px;
@@ -5810,7 +5810,7 @@ body {
       margin-top: 2px;
       margin-left: 20px;
       border-radius: 4px; }
-  .i_twitWrite_onfocus i[name="kamera"] {
+  .i_twitWrite_onfocus #kamera-main {
     display: none; }
   .i_twitWrite_onfocus ul li {
     margin-top: 5px;
@@ -5852,7 +5852,8 @@ body {
   margin: 0;
   padding-top: 15px;
   width: 100%;
-  height: 420px;
+  min-height: 100px;
+  overflow: hidden;
   border-bottom: 1px solid lightgray; }
   .i_content .top_content_left img {
     border-radius: 4px;
@@ -5862,7 +5863,6 @@ body {
     margin-left: 13px;
     font-size: 13px; }
     .i_content .top_content_right .text {
-      height: 33px;
       width: 100%;
       overflow: hidden; }
     .i_content .top_content_right .img {
@@ -5910,6 +5910,25 @@ body {
     margin-top: 8px; }
   .i_icons div[name="i"]:hover i {
     color: #2f99c2; }
+
+.cover-fa {
+  position: absolute;
+  right: 61px;
+  top: 263px;
+  color: white; }
+
+.profile-photo-fa {
+  z-index: 10;
+  position: absolute;
+  top: 390px;
+  left: 265px;
+  color: white; }
+
+#profile_photo {
+  opacity: 0; }
+
+input[type="file"] {
+  display: none; }
 
 .card {
   background-color: white;
@@ -5983,7 +6002,6 @@ body {
     list-style-type: none; }
 
 .coverImage {
-  background: url(https://pbs.twimg.com/profile_banners/485861114/1422943993/1500x500);
   height: 320px;
   background-repeat: no-repeat;
   width: 100%;
@@ -5991,6 +6009,10 @@ body {
   margin-top: 0px;
   position: relative;
   top: 0; }
+  .coverImage img {
+    width: 100%;
+    height: 380px;
+    position: relative; }
 
 .b:hover {
   border-bottom: 6px solid black; }
@@ -6035,6 +6057,9 @@ body {
       border-radius: 8px;
       border: 5px solid white; }
     .stat ul li button {
+      top: 10px;
+      right: 45px;
+      position: absolute;
       width: 109px;
       padding-top: 9px;
       padding-bottom: 9px;
