@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Twit;
-
+use Auth;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Http\Requests;
@@ -17,9 +17,10 @@ class ProfileController extends Controller
 
   public function showProfile(Request $request)
   {
-    $tweets=$request->user()->twits()->orderBy('created_at', 'desc')->get();
-
+    $user_id=Auth::user()->id;
+    $tweets = Twit::orderBy('created_at','desc')->where('user_id', $user_id)->get();
     return view('profile',compact('tweets'));
+    
   }
 
   public function uploadFile(Request $request, User $userId)
