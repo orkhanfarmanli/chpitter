@@ -21,7 +21,7 @@
                                               <a href="#">{{ $flw->name }}</a><span>{{ $flw->email }}</span>
 
                                           </div>
-                                          <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"></i>                                                Follow</button>
+                                          <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"></i>Follow</button>
                                       </div>
                                   </div>
                               </div>

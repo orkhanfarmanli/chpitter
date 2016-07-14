@@ -19,9 +19,7 @@ class ProfileController extends Controller
   {
 
     $follow = User::take(3)->get();
-
     
-
     $user_id=Auth::user()->id;
     $tweets = Twit::orderBy('created_at','desc')->where('user_id', $user_id)->get();
     
