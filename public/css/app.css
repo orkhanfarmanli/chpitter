@@ -5852,7 +5852,8 @@ body {
   margin: 0;
   padding-top: 15px;
   width: 100%;
-  height: 420px;
+  min-height: 100px;
+  overflow: hidden;
   border-bottom: 1px solid lightgray; }
   .i_content .top_content_left img {
     border-radius: 4px;
@@ -5862,7 +5863,6 @@ body {
     margin-left: 13px;
     font-size: 13px; }
     .i_content .top_content_right .text {
-      height: 33px;
       width: 100%;
       overflow: hidden; }
     .i_content .top_content_right .img {

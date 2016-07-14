@@ -13,8 +13,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public function twits()
+    {
+      return $this->hasMany(Twit::class);
+    }
+
     protected $fillable = [
-        'twit_text', 'email', 'password','username','surname','profilephoto','coverphoto',
+         'email', 'password','username','surname','profilephoto','coverphoto',
     ];
 
     /**
@@ -25,8 +30,5 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    public function twits()
-    {
-      return $this->hasMany(Twit::class);
-    }
+  
 }

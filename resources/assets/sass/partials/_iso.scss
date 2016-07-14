@@ -146,7 +146,8 @@ input{
   margin: 0;
   padding-top: 15px;
   width: 100%;
-  height: 420px;
+  min-height: 100px;
+  overflow: hidden;
   border-bottom: 1px solid lightgray;
 
   .top_content_left{
@@ -161,7 +162,6 @@ input{
   margin-left: 13px;
   font-size: 13px;
   .text{
-    height:33px;
     width: 100%;
     overflow: hidden;
   }

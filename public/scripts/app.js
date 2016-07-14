@@ -21,11 +21,11 @@ $(document).ready(function() {
 
 //twitright area camera icon js for open input type file
   $("#kamera-main").click(function() {
-    $("#image_src").click();
+    $("#tweetWrite_file").click();
   });
 
   $("#kamera_main_two").click(function() {
-    $("#image_src").click();
+    $("#tweetWrite_file").click();
   });
 //cover section open input file for cover image
   $("#kamra-cover-profile").click(function() {
@@ -33,7 +33,7 @@ $(document).ready(function() {
   });
 //profile section open input file for profile image
   $("#profile_kamera").click(function() {
-    console.log("nese");
+   
     $("#profile_photo").click();
   });
 

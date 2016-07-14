@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Twit;
+
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Http\Requests;
@@ -14,9 +15,11 @@ class ProfileController extends Controller
       $this->middleware('auth');
   }
 
-  public function showProfile()
+  public function showProfile(Request $request)
   {
-    return view('profile');
+    $tweets=$request->user()->twits()->orderBy('created_at', 'desc')->get();
+
+    return view('profile',compact('tweets'));
   }
 
   public function uploadFile(Request $request, User $userId)
@@ -51,11 +54,30 @@ class ProfileController extends Controller
 
   public function addTwit(Request $req,User $user)
   {
+
       $newTwit=new Twit;
       $newTwit->twit_text=$req->twit_text;
-      $user->twits()->save($newTwit);
-      return back();
+      
+
+        if($req->hasFile('twit_image')){
+        $file = $req->file('twit_image');
+        
+        $ext=$file->getClientOriginalExtension();
+        $destinationPath=public_path().'/images/tweetImages';
+
+        $fileName="$user->id".rand()."tweetPhoto.$ext";
+        $file->move($destinationPath, $fileName);
+        $newTwit->twit_image='images/tweetImages'.'/'.$fileName;
+       }
+
+        $user->twits()->save($newTwit);
+        return back();
   }
+
+
+ 
+
+
   //
 
 }
