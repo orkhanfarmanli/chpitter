@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFollowersTable extends Migration
+class ChangeFollowersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,8 @@ class CreateFollowersTable extends Migration
      */
     public function up()
     {
-        Schema::create('followers', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned()->index();
-            $table->integer('follow_id')->unsigned()->index();
-            $table->timestamps();
+        Schema::table('followers', function (Blueprint $table) {
+            //
         });
     }
 
@@ -26,6 +24,8 @@ class CreateFollowersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('followers');
+        Schema::table('followers', function (Blueprint $table) {
+            //
+        });
     }
 }

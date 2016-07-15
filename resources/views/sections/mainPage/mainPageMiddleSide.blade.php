@@ -6,30 +6,42 @@
       </div>
     </div>
   </div>
-  @foreach($alltweets as $tw)
+
+
+  
+  @foreach($result as $tweet)
+
   <div class="row">
     <div class="i_content">
       <div class="col-md-1 top_content_left">
-        <img src="{{$tw->user->profilephoto}}" alt="" />
+          @if(empty(Auth::user()->followers()->find($tweet->user_id)->profilephoto))
+          <img src="images/default_profile_photo.png">
+          @else
+          <img src="{{ Auth::user()->followers()->find($tweet->user_id)->profilephoto }}">
+          @endif
       </div>
       <div class="col-md-11 ">
         <div class="top_content_right">
           <div class="i_content_title">
-            <b><h4><a>{{$tw->user->name}}{{$tw->user->surname}}</a></h4></b>
-            <span>{{$tw->user->username}}
-              <a>{{$tw->created_at->diffForHumans()}}</a>
+            <b><h4><a>{{Auth::user()->followers()->find($tweet->user_id)->name}}
+            {{Auth::user()->followers()->find($tweet->user_id)->surname}}
+            </a></h4></b>
+            <span><i>@</i>{{Auth::user()->followers()->find($tweet->user_id)->username}}
+              <a>{{$tweet->created_at}}</a>
             </span>
           </div>
+
           <div class="i_content_twit">
             <div class="text">
-              <p>{{ $tw->twit_text }}</p>
+              <p>{{ $tweet->twit_text }}</p>
             </div>
-            @unless(empty($tw->twit_image))
-            <div class="img">
-              <img src="{{$tw->twit_image}}" />
-            </div>
-            @endunless
+              @unless(empty($tweet->twit_image))
+              <div class="img">
+                <img src="{{$tweet->twit_image}}" />
+              </div>
+              @endunless
           </div>
+       
           <div class="i_icons">
             <div class="col-md-2" style="padding:0px">
               <svg name="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 72">

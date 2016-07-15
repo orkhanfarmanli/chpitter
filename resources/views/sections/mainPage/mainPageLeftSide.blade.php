@@ -47,7 +47,7 @@
                               <li class="col-md-4">
                                   <a class="statistics" href="#">Tweets</a>
                                    
-                                  <a href="">{{ $tweetMain->count()}}</a>
+                                  {{-- <a href="">{{ $tweetMain->count()}}</a> --}}
                                   
                               </li>
                               
