@@ -38,7 +38,7 @@
                       <h4><a href="#"> Find Friends</a></h4>
                   </div>
 
-                  <div class="trends">
+                 <!--  <div class="trends">
                       <div class="hashtag">
                           <h2>Trends</h2>
                           <h2>.</h2>
@@ -88,6 +88,6 @@
                           <h6>89.7K Tweets</h6>
                       </div>
                   </div>
-
+ -->
               </div>
 </div>

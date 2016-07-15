@@ -23,7 +23,7 @@
                           <span class="text-e">Home</span>
                         </a>
                       </li>
-                      <li>
+                     <!--  <li>
                         <a href="/notifications">
                           <span class='second Icon Icon--discover'>
                             <span class="text-e">Notifications</span>
@@ -34,7 +34,7 @@
                         <span class='second Icon Icon--message'>
                           <span class="text-e">Messages</span>
                         </span>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
@@ -66,11 +66,11 @@
                               </p></b>
                             </li>
                           </a>
-                          <a href="/settings">
+                         <!--  <a href="/settings">
                             <li>
                               <b>Settings</b>
                             </li>
-                          </a>
+                          </a> -->
                           <a href="{{ url('/logout') }}">
                             <li>
                               <b>Log out</b>
