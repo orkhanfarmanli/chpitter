@@ -6,62 +6,29 @@
                               <h4><a href="#"> Refresh</a></h4>
                               <h4><a href="#"> View all</a></h4>
                           </div>
+
+                          @foreach($follow as $flw)
                           <div class="col-md-12" style="margin:0;padding:0">
                               <div class="follow_main">
                                   <div class="follow_sec">
                                       <div class="col-md-4" style="margin:0;padding:0">
                                           <div class="imgBox">
-                                              <img src="img/img1.jpeg">
+                                              <img src="{{ $flw->profilephoto }}">
                                           </div>
                                       </div>
                                       <div class="col-md-8" style="margin:0;padding:0">
                                           <div class="text">
-                                              <a href="#">NurgulQuliyeva</a><span>@somethingSometihingaaaaaaa</span>
+                                              <a href="#">{{ $flw->name }}</a><span>{{ $flw->email }}</span>
 
                                           </div>
-                                          <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"></i>                                                Follow</button>
+                                          <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"></i>Follow</button>
                                       </div>
                                   </div>
                               </div>
 
                           </div>
-                          <div class="col-md-12" style="margin:0;padding:0">
-                              <div class="follow_main">
-                                  <div class="follow_sec">
-                                      <div class="col-md-4" style="margin:0;padding:0">
-                                          <div class="imgBox">
-                                              <img src="img/img1.jpeg">
-                                          </div>
-                                      </div>
-                                      <div class="col-md-8" style="margin:0;padding:0">
-                                          <div class="text">
-                                              <a href="#">NurgulQuliyeva</a><span>@somethingSometihingaaaaaaa</span>
-                                          </div>
-                                          <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"></i>                                                Follow</button>
-                                      </div>
-                                  </div>
-                              </div>
-
-                          </div>
-                          <div class="col-md-12" style="margin:0;padding:0">
-                              <div class="follow_main">
-                                  <div class="follow_sec">
-                                      <div class="col-md-4" style="margin:0;padding:0">
-                                          <div class="imgBox">
-                                              <img src="img/img1.jpeg">
-                                          </div>
-                                      </div>
-                                      <div class="col-md-8" style="margin:0;padding:0">
-                                          <div class="text">
-                                              <a href="#">NurgulQuliyeva</a><span>@somethingSometihingaaaaaaa</span>
-                                          </div>
-                                          <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"></i>                                                Follow</button>
-                                      </div>
-                                  </div>
-                              </div>
-
-                          </div>
-
+                          @endforeach
+                          
 
                       </div>
 

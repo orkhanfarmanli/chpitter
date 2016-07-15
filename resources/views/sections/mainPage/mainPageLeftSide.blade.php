@@ -43,10 +43,14 @@
 
                       <div class="stat">
                           <ul class="stat col-md-12">
+                          
                               <li class="col-md-4">
                                   <a class="statistics" href="#">Tweets</a>
-                                  <a href="">577</a>
+                                   
+                                  <a href="">{{ $tweetMain->count()}}</a>
+                                  
                               </li>
+                              
                               <li class="col-md-4">
                                   <a class="statistics" href="#">Following</a>
                                   <a href="">317</a>

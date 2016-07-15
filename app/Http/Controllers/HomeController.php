@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
+use App\User;
+use App\Twit;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+
+
 
 class HomeController extends Controller
 {
@@ -24,6 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('main');
+        $followerMain = User::take(3)->get();
+        $alltweets= Twit::orderBy('created_at','desc')->get();
+        $useridMain=Auth::user()->id;
+        $tweetMain = Twit::orderBy('created_at','desc')->where('user_id', $useridMain)->get();
+        return view('main', compact('followerMain', 'tweetMain', 'alltweets'));
     }
 }

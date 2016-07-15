@@ -21,10 +21,12 @@
                    
                     </a>
                     </li>
+                    
                     <li class="col-md-1 b">
                         <a class="statistics" href="#">Tweets</a>
-                        <a href="">577</a>
+                        <a href="">{{ $tweets->count() }}</a>
                     </li>
+                   
                     <li class="col-md-1 b">
                         <a class="statistics" href="#">Following</a>
                         <a href="">317</a>
