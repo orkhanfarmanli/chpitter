@@ -4,7 +4,7 @@
                     <div class="card">
                       <!--Cover Image -->
                       <div class="col-md-12 profileCover">
-                          <a href="">
+                          <a href="/profile">
                       @if(empty(Auth::user()->coverphoto))
                       <img src="images/default_banner_photo.png">
                       @else
