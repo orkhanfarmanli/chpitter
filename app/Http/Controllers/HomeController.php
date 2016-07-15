@@ -28,6 +28,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // return Auth::user()->followers()->get();
         $followerMain = User::take(3)->get();
         $alltweets= Twit::orderBy('created_at','desc')->get();
         $useridMain=Auth::user()->id;

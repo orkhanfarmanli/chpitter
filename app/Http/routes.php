@@ -28,3 +28,6 @@ Route::auth();
 Route::post('/home', 'HomeController@index');
 
 Route::post('/twitwrite/{user}', 'ProfileController@addTwit');
+
+Route::get('/follow/{id2}/{id1}', 'FollowerController@userOneFollowsTwo');
+Route::get('/unfollow/{id}', 'FollowerController@userOneUnfollowsTwo');

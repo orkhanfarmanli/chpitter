@@ -20,7 +20,12 @@
                                               <a href="#">{{ $flw->name }}</a><span>{{ $flw->email }}</span>
 
                                           </div>
-                                          <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"></i>                                                Follow</button>
+                                          @if(!Auth::user()->followers()->get()->find($flw->id))
+                                          <a href="/follow/{{$flw->id}}/{{Auth::user()->id}}"> <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"> Follow</i></button></a>
+                                          @else
+                                           <a href="/unfollow/{{$flw->id}}"> <button class="btnFollow"><i class="fa fa-user-plus" aria-hidden="true"> Unfollow</i></button></a>
+                                          @endif
+                                         
                                       </div>
                                   </div>
                               </div>

@@ -5870,7 +5870,7 @@ body {
       .i_content .top_content_right .img img {
         margin-top: 8px;
         width: 100%;
-        height: 304px; }
+        height: auto; }
       .i_content .top_content_right .img video {
         margin-top: 8px;
         width: 404px;
