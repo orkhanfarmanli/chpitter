@@ -12,7 +12,12 @@
           <div class="follow_sec">
             <div class="col-md-4" style="margin:0;padding:0">
               <div class="imgBox">
-                <img src="{{ $flw->profilephoto }}">
+               @if(empty($flw->profilephoto))
+              <img src="images/default_profile_photo.png">
+              @else
+              <img src="{{$flw->profilephoto }}">
+              @endif
+
               </div>
             </div>
             <div class="col-md-8" style="margin:0;padding:0">

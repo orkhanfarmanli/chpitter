@@ -10,17 +10,23 @@ class User extends Authenticatable
 *
 * @var array
 */
+
+public function usersLike()
+{
+	return $this->hasMany(Like::class);
+}
+
 public function twits()
 {
 	return $this->hasMany(Twit::class);
 }
 public function followers()
 {
-	return $this->belongsToMany('App\User', 'followers', 'user_id', 'follow_id')->withTimestamps();
+	return $this->belongsToMany('App\User', 'followers', 'follower_id', 'following_id')->withTimestamps();
 }
 public function following()
 {
-	return $this->belongsToMany('App\User', 'followers', 'follow_id', 'user_id')->withTimestamps();
+	return $this->belongsToMany('App\User', 'followers', 'following_id', 'follower_id')->withTimestamps();
 }
 protected $fillable = [
   'name','email', 'password','username','surname','profilephoto','coverphoto',

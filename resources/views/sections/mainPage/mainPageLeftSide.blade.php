@@ -47,17 +47,17 @@
                               <li class="col-md-4">
                                   <a class="statistics" href="#">Tweets</a>
                                    
-                                  {{-- <a href="">{{ $tweetMain->count()}}</a> --}}
+                                   <a href="">{{ $tweetsCount }}</a>
                                   
                               </li>
                               
                               <li class="col-md-4">
                                   <a class="statistics" href="#">Following</a>
-                                  <a href="">317</a>
+                                  <a href="">{{count($followers)}}</a>
                               </li>
                               <li class="col-md-4">
                                   <a class="statistics" href="">Followers</a>
-                                  <a href="">235</a>
+                                  <a href="">{{count($following)}}</a>
                               </li>
                           </ul>
                       </div>

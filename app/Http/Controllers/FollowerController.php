@@ -28,7 +28,7 @@ class FollowerController extends Controller
          public function userOneUnfollowsTwo($id)
     {   
 
-        Follower::where('follow_id',$id)->delete();
+        Follower::where('following_id',$id)->delete();
         return back();
     }
 

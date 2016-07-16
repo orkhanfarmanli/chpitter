@@ -16,7 +16,6 @@ class CreateTwitsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->text('twit_text');
-            $table->integer('like_count');
             $table->text('twit_image');        
             $table->timestamps('post_date');
         });

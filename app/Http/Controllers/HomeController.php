@@ -6,6 +6,8 @@ use App\User;
 use App\Twit;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use DB;
+use Carbon\Carbon;
 
 
 
@@ -35,37 +37,17 @@ class HomeController extends Controller
 
     public function index()
     {
-        $users = [];
-        $tweets = [];
+     
         $followers = Auth::user()->followers;
+        $following = Auth::user()->following;
         $followerMain = User::take(3)->get();
-        
-
-        foreach ($followers as $follower) {
-            array_push($users, User::find($follower->id));
-        }
+        $tweetsCount = count(Auth::user()->twits()->get());
+        $user_id=Auth::user()->id;
+            
 
 
-        for ($i=0; $i < count($users); $i++) { 
+        $gelenler=DB::select('CALL getalltwitsforuserid(?)', array($user_id));
+        return view('main', compact('users', 'followerMain','followers', 'result', 'tweetsCount', 'following', 'gelenler','user_id'));
 
-
-            array_push($tweets, json_decode(Twit::orderBy('created_at')->where('user_id', $users[$i]->id)->get()));
-
-        }
-
-        $result = array_reduce($tweets, 'array_merge', array());
-
-       
-
-        usort($result, array($this, "arraySorter"));
-
-        
-        
-        return view('main', compact('users', 'followerMain','followers', 'result'));
-
-        // $alltweets= Twit::orderBy('created_at','desc')->get();
-        // $useridMain=Auth::user()->id;
-        // $tweetMain = Twit::orderBy('created_at','desc')->where('user_id', $useridMain)->get();
-        // return view('main', compact('followerMain', 'tweetMain', 'alltweets','screen_users'));
     }
 }
