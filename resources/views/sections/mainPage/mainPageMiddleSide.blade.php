@@ -1,3 +1,6 @@
+
+
+
 <div id="body-column" class="col-md-6 col-xs-6">
   <div class="i_main">
     <div class="row">
@@ -6,30 +9,55 @@
       </div>
     </div>
   </div>
-  @foreach($alltweets as $tw)
+
+
+  
+  @foreach($gelenler as $tweet)
+
+{{-- {{
+
+      
+        $twit_date=$gelenler[$user_id]->created_at;
+        $expire_date_string = $twit_date;
+        //  Parse date with carbon
+        $carbonated_date = Carbon::parse($expire_date_string);
+        //  Assuming today was 2016-07-27 12:45:32
+        $diff_date = $carbonated_date->diffForHumans(Carbon::now());
+      
+   
+  }} --}}
+
   <div class="row">
     <div class="i_content">
       <div class="col-md-1 top_content_left">
-        <img src="{{$tw->user->profilephoto}}" alt="" />
+          @if(empty($tweet->ProfilePhoto))
+          <img src="images/default_profile_photo.png">
+          @else
+          <img src="{{$tweet->ProfilePhoto }}">
+          @endif
       </div>
       <div class="col-md-11 ">
         <div class="top_content_right">
           <div class="i_content_title">
-            <b><h4><a>{{$tw->user->name}}{{$tw->user->surname}}</a></h4></b>
-            <span>{{$tw->user->username}}
-              <a>{{$tw->created_at->diffForHumans()}}</a>
+            <b><h4><a>{{$tweet->twitter_name}}
+            {{$tweet->twitter_surname}}
+            </a></h4></b>
+            <span><i>@</i>{{$tweet->TwUsername}}
+              <a>{{Carbon\Carbon::parse($tweet->created_at)->diffForHumans()}}</a>
             </span>
           </div>
+
           <div class="i_content_twit">
             <div class="text">
-              <p>{{ $tw->twit_text }}</p>
+              <p>{{ $tweet->twit_text }}</p>
             </div>
-            @unless(empty($tw->twit_image))
-            <div class="img">
-              <img src="{{$tw->twit_image}}" />
-            </div>
-            @endunless
+              @unless(empty($tweet->twit_image))
+              <div class="img">
+                <img src="{{$tweet->twit_image}}" />
+              </div>
+              @endunless
           </div>
+       
           <div class="i_icons">
             <div class="col-md-2" style="padding:0px">
               <svg name="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 72">
@@ -43,7 +71,7 @@
                     />
                   </svg>
                 </div>
-                <div class="col-md-1">
+                <div id="like" class="col-md-1">
                   <svg name="3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 72" style="width:16px;">
                     <path d="M38.723,12c-7.187,0-11.16,7.306-11.723,8.131C26.437,19.306,22.504,12,15.277,12C8.791,12,3.533,18.163,3.533,24.647 C3.533,39.964,21.891,55.907,27,56c5.109-0.093,23.467-16.036,23.467-31.353C50.467,18.163,45.209,12,38.723,12z"
                       />

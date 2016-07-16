@@ -67,4 +67,12 @@ $(document).ready(function() {
   })
 
 
+//make like count
+$("#like").click(function () {
+    
+
+
+})
+
+
 })

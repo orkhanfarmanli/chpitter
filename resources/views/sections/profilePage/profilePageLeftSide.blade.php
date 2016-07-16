@@ -29,11 +29,11 @@
                    
                     <li class="col-md-1 b">
                         <a class="statistics" href="#">Following</a>
-                        <a href="">317</a>
+                        <a href="">{{count($followers)}}</a>
                     </li>
                     <li class="col-md-1 b">
                         <a class="statistics" href="">Followers</a>
-                        <a href="">235</a>
+                        <a href="">{{count($following)}}</a>
                     </li>
                     <li class="col-md-1 b">
                         <a class="statistics" href="">Likes</a>

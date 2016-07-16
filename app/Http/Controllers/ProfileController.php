@@ -19,13 +19,13 @@ class ProfileController extends Controller
   {
 
     $follow = User::take(3)->get();
-    
+    $followers = Auth::user()->followers;
+    $following = Auth::user()->following;
     $user_id=Auth::user()->id;
-    $tweets = Twit::orderBy('created_at','desc')->where('user_id', $user_id)->get();
+    $tweets = Twit::with('like')->orderBy('created_at','desc')->where('user_id', $user_id)->get();
     
-    return view('profile',compact('tweets','follow'));
+    return view('profile',compact('tweets','follow','followers', 'following'));
     
-
 
   }
 

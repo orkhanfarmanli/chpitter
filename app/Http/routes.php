@@ -19,6 +19,7 @@ Route::get('/notifications', 'NotificationController@showNotification');
 Route::get('/settings', 'SettingController@showSetting');
 Route::get('/adminpage', 'AdminController@show');
 
+
 Route::get('/', function () {
   return redirect('/login');
 });
@@ -31,3 +32,7 @@ Route::post('/twitwrite/{user}', 'ProfileController@addTwit');
 
 Route::get('/follow/{id2}/{id1}', 'FollowerController@userOneFollowsTwo');
 Route::get('/unfollow/{id}', 'FollowerController@userOneUnfollowsTwo');
+
+
+Route::get('/liked/{id}/{tweet_id}', 'LikeController@like');
+Route::get('/unliked/{id}/{tweet_id}', 'LikeController@unlike');

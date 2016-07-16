@@ -16,13 +16,7 @@ class FollowerController extends Controller
 
         // Find user with ID 2
         $follower = User::find($id1); //id of logged user
-         foreach ($follower->followers as $follower) {
-                if ($follower->id==$id1) {
-                    Follower::find($id2)->remove();
-                    return back();
-                }
-                 
-            }
+
         if ($following && $follower) {           
             $follower->following()->save($following);
             return back();
@@ -34,9 +28,7 @@ class FollowerController extends Controller
          public function userOneUnfollowsTwo($id)
     {   
 
-        Follower::where('follow_id',$id)->delete();
-
-
+        Follower::where('following_id',$id)->delete();
         return back();
     }
 

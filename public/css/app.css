@@ -6079,7 +6079,8 @@ input[type="file"] {
 .profileInfo {
   text-align: left;
   position: absolute;
-  top: 40px; }
+  top: 40px;
+  left: -20px; }
   .profileInfo h1 {
     font-weight: 700;
     font-size: 22px;

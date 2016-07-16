@@ -6,6 +6,8 @@ use App\User;
 use App\Twit;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use DB;
+use Carbon\Carbon;
 
 
 
@@ -26,13 +28,26 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public  function arraySorter($a, $b)
+    {
+        return strcmp($b->created_at, $a->created_at);
+    }
+
+
     public function index()
     {
-        // return Auth::user()->followers()->get();
+     
+        $followers = Auth::user()->followers;
+        $following = Auth::user()->following;
         $followerMain = User::take(3)->get();
-        $alltweets= Twit::orderBy('created_at','desc')->get();
-        $useridMain=Auth::user()->id;
-        $tweetMain = Twit::orderBy('created_at','desc')->where('user_id', $useridMain)->get();
-        return view('main', compact('followerMain', 'tweetMain', 'alltweets'));
+        $tweetsCount = count(Auth::user()->twits()->get());
+        $user_id=Auth::user()->id;
+            
+
+
+        $gelenler=DB::select('CALL getalltwitsforuserid(?)', array($user_id));
+        return view('main', compact('users', 'followerMain','followers', 'result', 'tweetsCount', 'following', 'gelenler','user_id'));
+
     }
 }
